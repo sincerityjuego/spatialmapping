@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b0f14;
+  color: #e6edf3;
+}
+
+header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+}
+
+header h1 {
+  font-size: 16px;
+  color: #38bdf8;
+}
+
+#searchBox {
+  flex: 1;
+  padding: 8px;
+  background: #020617;
+  border: 1px solid #1f2937;
+  color: white;
+  border-radius: 6px;
+}
+
+#offlineBtn {
+  background: #16a34a;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+#container {
+  display: flex;
+  height: calc(100vh - 52px);
+}
+
+#map {
+  flex: 3;
+}
+
+#infoPanel {
+  flex: 1;
+  background: #020617;
+  border-left: 1px solid #1f2937;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+#tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+#tabs button {
+  flex: 1;
+  background: #111827;
+  color: #e6edf3;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.card {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.red { background:#7f1d1d }
+.orange { background:#9a3412 }
+.yellow { background:#854d0e }
+.green { background:#14532d }
+
+/* Mobile */
+@media (max-width: 768px) {
+  #container { flex-direction: column; }
+  #map { height: 50vh; }
+}
