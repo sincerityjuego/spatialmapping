@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GeoVision Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- MapLibre -->
+  <link href="https://unpkg.com/maplibre-gl@3.5.2/dist/maplibre-gl.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/maplibre-gl@3.5.2/dist/maplibre-gl.js"></script>
+
+  <!-- OSM Buildings -->
+  <script src="https://cdn.osmbuildings.org/OSMBuildings-GLMap.js"></script>
+
+  <!-- Cesium (future WebGPU / terrain sim) -->
+  <script src="https://unpkg.com/cesium/Build/Cesium/Cesium.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header>
+  <h1>🌏 GeoVision Monitor</h1>
+  <input id="searchBox" placeholder="Search barangay, city, province..." />
+  <button id="offlineBtn">Offline Mode</button>
+</header>
+
+<div id="container">
+  <div id="map"></div>
+
+  <aside id="infoPanel">
+    <h2>Location Intelligence</h2>
+
+    <section id="tabs">
+      <button data-tab="overview">Overview</button>
+      <button data-tab="disaster">Disaster</button>
+      <button data-tab="ai">AI Planner</button>
+      <button data-tab="lgu">LGU</button>
+    </section>
+
+    <div id="details"></div>
+  </aside>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
